@@ -57,7 +57,17 @@
 
     ];
 
-    
+    function filterByElement($characters, $element) {
+        $filteredCharacters = [];
+
+        foreach ($characters as $character) {
+            if ($character['element'] == $element){
+                $filteredCharacters[] = $character;
+            }
+        }
+
+        return $filteredCharacters;
+    }
 
     ?>
 
@@ -75,8 +85,9 @@
         hunger
     </p>
 
+
     <ul>
-        <?php foreach ($characters as $character) : ?>
+        <?php foreach (filterByElement($characters, 'Dendro') as $character) : ?>
             <li>
                 <a href="<?= $character['link']?>">
                     <?= $character['name'] ?>
