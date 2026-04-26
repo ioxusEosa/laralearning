@@ -17,26 +17,53 @@
     
     <?php 
     
-    $instruments = [
-        "Cello",
-        "Violin",
-        "Viola"
+    $characters = [
+        [
+            'name' => 'Nefer',
+            'element' => 'Dendro',
+            'region' => 'Sumeru',
+            'link' => 'https://genshin-impact.fandom.com/wiki/Nefer'
+        ],
+        [
+            'name'=> 'Lauma',
+            'element' => 'Dendro',
+            'region' => 'Nod Krai',
+            'link'=> 'https://genshin-impact.fandom.com/wiki/Lauma'
+        ],
+        [
+            'name'=> 'Columbina',
+            'element'=> 'Hydro',
+            'region'=> 'Nod Krai',
+            'link'=> 'https://genshin-impact.fandom.com/wiki/Columbina'
+        ],
+        [
+            'name'=> 'Furina',
+            'element'=> 'Hydro',
+            'region'=> 'Fontaine',
+            'link'=> 'https://genshin-impact.fandom.com/wiki/Furina'
+        ],
+        [
+            'name'=> 'Zibai',
+            'element' => 'Geo',
+            'region'=> 'Liyue',
+            'link'=> 'https://genshin-impact.fandom.com/wiki/Zibai'
+        ],
+        [
+            'name'=> 'Xianyun',
+            'element'=> 'Anemo',
+            'region'=> 'Liyue',
+            'link'=> 'https://genshin-impact.fandom.com/wiki/Xianyun'
+        ]
+
     ];
 
-    $goated = "true";
-    $message = "";
-
-    if ($goated){
-        $message = "im losing it";
-    }
+    
 
     ?>
 
     <h1>
     
-        <?=
-        $message . " ". $instruments[0]; 
-        ?>    
+     
         
     </h1>
   
@@ -49,8 +76,12 @@
     </p>
 
     <ul>
-        <?php foreach ($instruments as $instrument) : ?>
-            <li><?= $instrument ?></li>
+        <?php foreach ($characters as $character) : ?>
+            <li>
+                <a href="<?= $character['link']?>">
+                    <?= $character['name'] ?>
+                </a>
+            </li>
         <?php endforeach; ?>
     </ul>
 </body>
