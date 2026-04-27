@@ -57,17 +57,19 @@
 
     ];
 
-    function filterByElement($characters, $element) {
-        $filteredCharacters = [];
+    function filter($items, $key, $value) {
+        $filteredItems = [];
 
-        foreach ($characters as $character) {
-            if ($character['element'] == $element){
-                $filteredCharacters[] = $character;
+        foreach ($items as $item) {
+            if ($item[$key] == $value){
+                $filteredItems[] = $item;
             }
         }
 
-        return $filteredCharacters;
+        return $filteredItems;
     }
+
+    $filteredCharacters = filter($characters, 'region', 'Nod Krai');
 
     ?>
 
@@ -77,7 +79,7 @@
         
     </h1>
   
-    <a href="https://i2.wp.com/images.genshin-builds.com/genshin/characters/nefer/image.png?strip=all&quality=100&w=160">aaaaaaaaaaaaa</a>
+    <a href="https://i2.wp.com/images.genshin-builds.com/genshin/items/nefer/image.png?strip=all&quality=100&w=160">aaaaaaaaaaaaa</a>
   
     <img src="nefer2.gif" alt="lonely lonely i guess im lonely" width="800" height="400">
     
@@ -87,7 +89,7 @@
 
 
     <ul>
-        <?php foreach (filterByElement($characters, 'Dendro') as $character) : ?>
+        <?php foreach ($filteredCharacters as $character) : ?>
             <li>
                 <a href="<?= $character['link']?>">
                     <?= $character['name'] ?>
