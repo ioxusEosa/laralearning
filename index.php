@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Demo</title>
-    <style>
-        body {
-            display: grid;
-            place-items: center;
-            height: 100;
-            margin: 0;
-            font-family: 'Lucida Sans';
-        }
-    </style>
-</head>
-<body>
-    
-    <?php 
+<?php 
     
     $characters = [
         [
@@ -69,6 +52,7 @@
         return $filteredItems;
     }
 
+<<<<<<< HEAD
     $filteredCharacters = filter($characters, 'element', 'Hydro');
 
     ?>
@@ -86,16 +70,20 @@
     <p title="AAAAAAAAAAAAAAAAA">
         hunger
     </p>
+=======
+    $filteredCharacters = filter($characters, 'region', 'Nod Krai'); 
+>>>>>>> fd62d94f396ad54bfd0bea6125cabbfdaae8096e
 
 
-    <ul>
-        <?php foreach ($filteredCharacters as $character) : ?>
-            <li>
-                <a href="<?= $character['link']?>">
-                    <?= $character['name'] ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-</body>
-</html>
+    require "index.view.php";
+
+
+
+
+
+
+
+
+
+
+?>
