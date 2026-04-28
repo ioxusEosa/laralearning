@@ -69,7 +69,7 @@
         return $filteredItems;
     }
 
-    $filteredCharacters = filter($characters, 'region', 'Nod Krai');
+    $filteredCharacters = filter($characters, 'element', 'Hydro');
 
     ?>
 
