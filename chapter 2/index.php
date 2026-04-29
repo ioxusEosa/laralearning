@@ -1,0 +1,6 @@
+<?= 
+require "index.view.php";
+
+
+
+?>
